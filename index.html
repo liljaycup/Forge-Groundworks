@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forge Consulting | Operational Improvement & AI Readiness</title>
+    <meta name="description" content="Forge Consulting helps small and mid-sized businesses in the greater St. Louis region eliminate waste, improve operations, and navigate AI adoption. Based in St. Clair, Missouri.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1a1a1a;
+            --steel: #2d2d2d;
+            --warm-gray: #4a4540;
+            --medium-gray: #6b6560;
+            --light-warm: #f5f0eb;
+            --off-white: #faf8f5;
+            --ember: #c45a2d;
+            --ember-dark: #a34822;
+            --rule: #d4cec7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--charcoal);
+            background-color: var(--off-white);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- HEADER / NAV --- */
+        header {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.5rem;
+            color: var(--charcoal);
+            text-decoration: none;
+            letter-spacing: -0.01em;
+        }
+
+        .logo span {
+            color: var(--ember);
+        }
+
+        nav a {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--warm-gray);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: color 0.2s;
+            letter-spacing: 0.02em;
+        }
+
+        nav a:hover {
+            color: var(--ember);
+        }
+
+        /* --- HERO --- */
+        .hero {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 2rem 4rem;
+        }
+
+        .hero h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2.8rem;
+            line-height: 1.2;
+            color: var(--charcoal);
+            max-width: 700px;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--medium-gray);
+            max-width: 600px;
+            margin-bottom: 2rem;
+        }
+
+        .hero-cta {
+            display: inline-block;
+            background: var(--ember);
+            color: white;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.03em;
+            transition: background 0.2s;
+        }
+
+        .hero-cta:hover {
+            background: var(--ember-dark);
+        }
+
+        /* --- DIVIDER --- */
+        .divider {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .divider hr {
+            border: none;
+            border-top: 1px solid var(--rule);
+        }
+
+        /* --- APPROACH --- */
+        .approach {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .approach .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 1.5rem;
+        }
+
+        .approach h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            line-height: 1.3;
+            color: var(--charcoal);
+            max-width: 600px;
+            margin-bottom: 1.5rem;
+        }
+
+        .approach-text {
+            max-width: 650px;
+        }
+
+        .approach-text p {
+            color: var(--warm-gray);
+            margin-bottom: 1.2rem;
+        }
+
+        /* --- SERVICES --- */
+        .services {
+            background: var(--charcoal);
+            color: var(--light-warm);
+            padding: 4rem 2rem;
+        }
+
+        .services-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .services .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 2rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .service-item h3 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.25rem;
+            color: var(--off-white);
+            margin-bottom: 0.75rem;
+        }
+
+        .service-item p {
+            color: #a09a93;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        /* --- CREDENTIALS --- */
+        .credentials {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .credentials .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 1.5rem;
+        }
+
+        .credentials-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .credential {
+            padding: 1.25rem 0;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .credential strong {
+            display: block;
+            font-weight: 600;
+            color: var(--charcoal);
+            margin-bottom: 0.25rem;
+        }
+
+        .credential span {
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+
+        /* --- ABOUT --- */
+        .about {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .about .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 1.5rem;
+        }
+
+        .about-content {
+            max-width: 650px;
+        }
+
+        .about-content p {
+            color: var(--warm-gray);
+            margin-bottom: 1.2rem;
+        }
+
+        /* --- CONTACT --- */
+        .contact {
+            background: var(--light-warm);
+            padding: 4rem 2rem;
+        }
+
+        .contact-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .contact .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--ember);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact h2 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.8rem;
+            color: var(--charcoal);
+            margin-bottom: 1rem;
+        }
+
+        .contact p {
+            color: var(--warm-gray);
+            margin-bottom: 2rem;
+            max-width: 500px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: var(--charcoal);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            transition: color 0.2s;
+        }
+
+        .contact-info a:hover {
+            color: var(--ember);
+        }
+
+        .contact-location {
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            color: var(--medium-gray);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: var(--medium-gray);
+        }
+
+        footer a {
+            color: var(--medium-gray);
+            text-decoration: none;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            html {
+                font-size: 16px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                margin-right: 1.5rem;
+            }
+
+            .hero {
+                padding: 3rem 1.5rem 2.5rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .services, .contact {
+                padding: 3rem 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .credentials-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">Forge<span>.</span></a>
+        <nav>
+            <a href="#approach">Approach</a>
+            <a href="#services">Services</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Your business doesn't need more processes. It needs fewer.</h1>
+        <p>Forge Consulting helps small and mid-sized businesses in the greater St. Louis region cut what isn't working, adopt the right tools, and build operations around the people who actually do the work.</p>
+        <a href="#contact" class="hero-cta">Start a conversation</a>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="approach" id="approach">
+        <div class="section-label">Approach</div>
+        <h2>Most problems aren't solved by adding something. They're solved by stopping something.</h2>
+        <div class="approach-text">
+            <p>If you want to make something 10% better, build a perfect process. If you want to make it 140% better, stop doing something that's actively hurting you.</p>
+            <p>Forge exists because most businesses are drowning in procedures, tools, and systems that were built for a situation that no longer exists. Meanwhile, new challenges&mdash;AI disruption, supply chain volatility, workforce turnover&mdash;demand clear thinking, not more complexity.</p>
+            <p>We come in, observe how your operation actually works (not how it's supposed to work on paper), and give you a short, honest assessment: what to stop doing, what to change, and what tools will genuinely help. No jargon, no 50-page reports, no solutions that require a PhD to implement.</p>
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <div class="services-inner">
+            <div class="section-label">Services</div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Operational Assessments</h3>
+                    <p>A one- to two-day on-site evaluation of your business. We observe your workflows, talk to your people, and deliver a clear written report identifying waste to eliminate, misalignments between teams, and practical changes you can act on immediately. Built on Six Sigma methodology, delivered in plain English.</p>
+                </div>
+                <div class="service-item">
+                    <h3>AI Readiness</h3>
+                    <p>AI is changing every industry, but most of what you're hearing is hype. We help you separate what's real from what's noise for your specific business. Which tools will actually save you time and money? Which processes are candidates for automation? Where should you wait? We give you answers grounded in your operation, not someone else's.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Workshops &amp; Training</h3>
+                    <p>Half-day and full-day sessions for business owners and their teams. Topics include practical AI adoption, process improvement fundamentals, and navigating economic disruption. Available for individual businesses, chambers of commerce, and industry groups throughout the I-44 corridor and greater St. Louis region.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Ongoing Advisory</h3>
+                    <p>Some changes need more than a report. For businesses implementing significant operational shifts, we offer monthly advisory retainers&mdash;ongoing support to help you execute, train your team, and adapt as conditions change. Think of it as a fractional operations partner without the overhead of a full-time hire.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="credentials">
+        <div class="section-label">Credentials</div>
+        <div class="credentials-list">
+            <div class="credential">
+                <strong>Six Sigma Black Belt</strong>
+                <span>Process improvement &amp; waste elimination</span>
+            </div>
+            <div class="credential">
+                <strong>Instructional Design</strong>
+                <span>Training program development &amp; workforce education</span>
+            </div>
+            <div class="credential">
+                <strong>AI &amp; Technology Adoption</strong>
+                <span>Presenter to chambers of commerce &amp; public institutions</span>
+            </div>
+            <div class="credential">
+                <strong>Higher Education</strong>
+                <span>Academic advising, career navigation &amp; curriculum development</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"><hr></div>
+
+    <section class="about" id="about">
+        <div class="section-label">About</div>
+        <div class="about-content">
+            <p>Forge Consulting is led by [YOUR NAME], a Six Sigma Black Belt and operational improvement specialist based in St. Clair, Missouri.</p>
+            <p>With a background spanning instructional design, workforce training, and organizational development, [YOUR NAME] has spent years inside institutions and businesses watching how work actually gets done&mdash;and where it breaks down. The pattern is almost always the same: good people trapped in bad systems, solving the wrong problems, measuring the wrong things.</p>
+            <p>Forge was built on a simple conviction: the people inside your organization already know what's broken. They just need someone from outside the building who can see across the silos, name the real problem, and help leadership act on it.</p>
+            <p>We serve manufacturers, healthcare providers, hospitality operators, and small businesses throughout Franklin County, the I-44 corridor, and the greater St. Louis region.</p>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-inner">
+            <div class="section-label">Get in touch</div>
+            <h2>Let's talk about what's not working.</h2>
+            <p>No pitch, no pressure. If you're a business owner with an operation that's frustrating you, I'd like to hear about it.</p>
+            <div class="contact-info">
+                <a href="mailto:you@forgegroundwork.com">you@forgegroundwork.com</a>
+                <a href="tel:+15551234567">(555) 123-4567</a>
+            </div>
+            <div class="contact-location">
+                Serving St. Clair, Union, Washington, Sullivan,<br>
+                the I-44 corridor &amp; greater St. Louis region
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <span>&copy; 2026 Forge Groundwork LLC</span>
+    </footer>
+
+</body>
+</html>
